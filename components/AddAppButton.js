@@ -10,7 +10,7 @@ const AddAppButton = () => {
 	const [isAlreadyPWA, setIsAlreadyPWA] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const [isiOS, setIsiOS] = useState(false);
-	const [deferredPrompt, setDeferredPrompt] = useState(false);
+	const [deferredPrompt, setDeferredPrompt] = useState();
 
 	const [showiOS, setShowiOS] = useState(false);
 
@@ -37,7 +37,7 @@ const AddAppButton = () => {
 		setIsLoading(true);
 		if (isiOS) {
 			setShowiOS(true);
-		} if (deferredPrompt) {
+		} else if (deferredPrompt) {
 			// https://web.dev/customize-install/#in-app-flow
 
 			// Show the install prompt

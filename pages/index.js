@@ -33,7 +33,7 @@ const Home = ({ t, i18n, loading }) => {
 				const { minutes } = await res.json();
 				setNewGameLoading(false);
 
-				Swal.fire("selamlar");
+				Swal.fire(lockedMessage(minutes));
 			} else {
 				throw res.status + " " + res.statusText;
 			}

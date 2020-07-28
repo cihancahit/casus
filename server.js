@@ -28,6 +28,6 @@ const nextHandler = nextApp.getRequestHandler();
 
 	app.get("*", (req, res) => nextHandler(req, res));
 
-	await app.listen(port);
+	await http.listen(port);
 	console.log(`> Ready on http://localhost:${port}`); // eslint-disable-line no-console
 })();
